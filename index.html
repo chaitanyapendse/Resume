@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaitanya A Pendse- B.Tech Student Resume</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        :root {
+            --color-primary: #38bdf8; /* Sky Blue for highlights, links, and titles */
+            --color-text-dark: #f3f4f6; /* Near White for main text */
+            --color-text-medium: #d1d5db; /* Light Gray for subtitles/body text */
+            --color-text-light: #9ca3af; /* Medium Gray for dates/secondary info */
+            --color-background-body: #0f172a; /* Very Dark Blue (Slate) */
+            --color-border: #334155; /* Dark Slate border */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background-body);
+            margin: 0;
+            padding: 16px;
+            color: var(--color-text-dark); /* Default text color for the body */
+        }
+
+        #resume-container {
+            max-width: 64rem;
+            margin: 0 auto;
+            background-color: #1e293b; /* Slightly lighter dark background for the card */
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .content-padding {
+            padding: 1.5rem 1.5rem;
+        }
+
+        .header-contact {
+            background-color: #0c152a; /* Deep Navy Blue for header contrast */
+            color: white;
+            padding: 1.5rem;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+
+        .header-contact h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 0.25rem;
+        }
+
+        .header-contact h2 {
+            font-size: 1.25rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item a {
+            color: white;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 1.5rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .article-entry {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-header {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .article-header h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-text-dark);
+        }
+
+        .article-header span {
+            font-size: 0.875rem;
+            color: var(--color-text-light);
+            margin-top: 0.25rem;
+        }
+
+        .article-subtitle {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--color-text-medium);
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .task-list {
+            list-style-type: disc;
+            margin-left: 2rem;
+            padding: 0;
+            color: var(--color-text-medium); /* Adjusted for dark mode readability */
+            line-height: 1.5;
+        }
+
+        .task-list li {
+            margin-bottom: 0.25rem;
+        }
+
+        .project-list-item {
+            margin-bottom: 0.5rem;
+            list-style-type: disc;
+        }
+
+        .project-list-item strong {
+            color: var(--color-primary);
+        }
+
+        .project-list-item a {
+            color: var(--color-primary);
+            text-decoration: underline;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            color: var(--color-text-dark);
+        }
+
+        .skill-category h4 {
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-dark);
+        }
+
+        .skill-list {
+            list-style-type: disc;
+            margin-left: 1.25rem;
+            padding: 0;
+            line-height: 1.5;
+            color: var(--color-text-medium); /* Adjusted for dark mode readability */
+        }
+
+        @media (min-width: 640px) {
+            body {
+                padding: 2rem;
+            }
+
+            .content-padding {
+                padding: 2rem;
+            }
+
+            .header-contact {
+                padding: 2rem;
+            }
+
+            main {
+                padding: 2rem;
+            }
+
+            .header-contact h1 {
+                font-size: 3rem;
+            }
+
+            .header-contact h2 {
+                font-size: 1.5rem;
+            }
+
+            .contact-details {
+                flex-direction: row;
+                gap: 2rem;
+            }
+
+            .article-header {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .article-header span {
+                margin-top: 0;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body class="p-4 sm:p-8">
+    <div id="resume-container" class="resume-page">
+
+        <header class="header-contact">
+            <h1>Chaitanya Pendse</h1>
+            <h2>B.Tech Student | Aspiring Software Engineer</h2>
+
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    <a href="abhijit.chaitanya24@sakec.ac.in">abhijit.chaitanya24@sakec.ac.in</a>
+                </div>
+                <div class="contact-item">
+                    <i data-lucide="linkedin" class="w-4 h-4"></i>
+                    <a href="https://www.linkedin.com/in/chaitanya-pendse-4279a1272/" target="_blank">/in/Chaitanya Pendse</a>
+                </div>
+                <div class="contact-item">
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                    <a href="https://github.com/chaitanyapendse" target="_blank">/chaitanyapendse</a>
+                </div>
+                <div class="contact-item">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    <span>+91 9869783892</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+            <section>
+                <h3 class="section-title">Profile Summary</h3>
+                <p class="text-gray-700 leading-relaxed" style="color: var(--color-text-medium);">
+                    Highly motivated Computer Engineering student currently pursuing a B.Tech at Shah and Anchor
+                    Kuttchhi Engineering College. Proficient in core programming concepts in Java and foundational
+                    web technologies (HTML, CSS, JavaScript, React.js). Actively gaining practical experience in
+                    database management (MySQL), back-end basics (Spring Boot), and introductory game development
+                    (Unreal Engine). Eager to leverage technical fundamentals and a passion for building functional,
+                    efficient solutions in a dynamic engineering environment.
+                </p>
+            </section>
+
+            <section>
+                <h3 class="section-title">Technical Skills</h3>
+                <div class="skills-grid">
+
+                    <div class="skill-category">
+                        <h4>Programming & Scripting</h4>
+                        <ul class="skill-list">
+                            <li>Java</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>HTML5 / CSS3</li>
+                            <li>SQL (MySQL)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Web & App Development</h4>
+                        <ul class="skill-list">
+                            <li>React.js (Frontend)</li>
+                            <li>Android Dev (Basics)</li>
+                            <li>Spring Boot (Basics, Backend)</li>
+                            <li>NetBeans GUI (JFrames)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Tools & Platforms</h4>
+                        <ul class="skill-list">
+                            <li>MySQL (Database)</li>
+                            <li>Unreal Engine (Game Dev Basics)</li>
+                            <li>Git / GitHub</li>
+                            <li>Object-Oriented Programming (OOP)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="section-title">GitHub Projects</h3>
+                <article class="article-entry" style="margin-bottom: 0;">
+                    <ul id="github-projects-list" class="task-list">
+                        <li class="project-list-item">Loading projects from GitHub...</li>
+                    </ul>
+                </article>
+            </section>
+
+
+            <section>
+                <h3 class="section-title">Coursework Highlights</h3>
+
+                <article class="article-entry" style="margin-bottom: 0;">
+                    <ul class="task-list">
+                        <li>Completed foundational projects demonstrating proficiency in Java OOP concepts and
+                            algorithms.</li>
+                        <li>Developed responsive web interfaces using HTML, CSS, and JavaScript.</li>
+                        <li>Explored basic functionality and state management using the React.js library for modern
+                            front-end applications.</li>
+                        <li>Used MySQL for database integration in class projects, focusing on query optimization and
+                            schema design.</li>
+                        <li>Familiarity with creating desktop GUI applications using NetBeans and JFrames.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section>
+                <h3 class="section-title">Semester Results</h3>
+                <article class="article-entry" style="margin-bottom: 0;">
+                    <ul class="task-list">
+                        <li>CGPA: 9.91 (SEM-1)</li>
+                        <li>CGPA: 9.77 (SEM-2 COMPLETED)</li>
+                        <li>CGPA: (SEM-3 In Progress)</li>
+                    </ul>
+                </article>
+            </section>
+
+
+            <section style="border-bottom: none; margin-bottom: 0;">
+                <h3 class="section-title">Education</h3>
+
+                <article class="article-entry" style="margin-bottom: 0;">
+                    <div class="article-header">
+                        <h4>B.Tech in Computer Engineering</h4>
+                        <span>2024 — Present</span>
+                    </div>
+                    <p class="article-subtitle" style="margin-bottom: 0.25rem;">Shah and Anchor Kuttchhi Engineering
+                        College | Mumbai, IN</p>
+                    <p style="font-size: 0.875rem; color: var(--color-text-medium);">Currently pursuing a Bachelor of
+                        Technology degree in Computer Engineering. Focus on Artificial Intelligence, Data Structures, Algorithms, and Software
+                        Development.</p>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        const GITHUB_USERNAME = 'chaitanyapendse';
+        const API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=5`;
+
+        const projectsList = document.getElementById('github-projects-list');
+
+        async function fetchGitHubProjects() {
+            try {
+                const response = await fetch(API_URL);
+
+                if (response.status === 404) {
+                    projectsList.innerHTML = `<li class="project-list-item">Error: GitHub user "${GITHUB_USERNAME}" not found. Please check the username.</li>`;
+                    return;
+                }
+
+                if (!response.ok) {
+                    projectsList.innerHTML = `<li class="project-list-item">Error: Failed to fetch projects (${response.statusText}).</li>`;
+                    return;
+                }
+
+                const data = await response.json();
+
+                if (data.length === 0) {
+                    projectsList.innerHTML = `<li class="project-list-item">No public repositories found.</li>`;
+                    return;
+                }
+
+                projectsList.innerHTML = '';
+
+                data.forEach(repo => {
+
+                    const listItem = document.createElement('li');
+                    listItem.className = 'project-list-item';
+
+                    const link = document.createElement('a');
+                    link.href = repo.html_url;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+
+                    const languageText = repo.language ? ` (${repo.language})` : '';
+                    link.innerHTML = `<strong>${repo.name}</strong>${languageText}`;
+
+                    listItem.appendChild(link);
+
+                    projectsList.appendChild(listItem);
+                });
+
+                if (projectsList.children.length === 0) {
+                    projectsList.innerHTML = `<li class="project-list-item">No active projects found after filtering.</li>`;
+                }
+
+            } catch (error) {
+                console.error("Failed to fetch GitHub projects:", error);
+                projectsList.innerHTML = `<li class="project-list-item">An unexpected error occurred while loading projects.</li>`;
+            }
+        }
+
+        window.onload = fetchGitHubProjects;
+
+
+    </script>
+</body>
+
+</html>
